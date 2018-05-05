@@ -6,6 +6,7 @@ $(function() {
   function renderMessage(result, roomSelected) {
     var scriptPattern = /<script>|<\/script>/;
     var rooms = {};
+    console.log(result)
     for (let i = result.length-1; i > 0 ; i--) {
       let mesg = result[i]['text'];
       let roomname = result[i]['roomname'];
@@ -25,7 +26,7 @@ $(function() {
       if (result[i]['roomname'] === roomSelected){
         $('.chats').append(
                 `<div class = 'render'>
-                <div class = 'user ${roomname}'> ${user} </div>
+                <div class = 'user ${roomname} ${user}'> ${user} </div>
                 <div class = 'mesg ${roomname}'> ${mesg} </div>
                 </div>
                 `); 
@@ -81,9 +82,6 @@ $(function() {
 
 
 
-
-
-
   //Actual code that is running
   $.ajax({
     url: 'http://parse.sfm6.hackreactor.com/chatterbox/classes/messages/',
@@ -96,7 +94,10 @@ $(function() {
     } 
   });
 
-  $('select').change(displayMessagesFromRoom);
+
   $('.submitMessage').on('click', postMessage);
+  $('select').change(displayMessagesFromRoom);
+  $('.textbox').val('start typing!');
+
 
 });
