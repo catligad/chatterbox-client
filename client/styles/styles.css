@@ -7,6 +7,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .messengerHolder{
@@ -22,6 +23,8 @@ body {
     padding-bottom: 5px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    border: solid;
+    border-color: black;
 }
 
 #messengerBody {
@@ -29,6 +32,9 @@ body {
     color: white;
     padding-top: 5px;
     padding-bottom: 5px;
+    border: solid;
+    border-color: black;
+    border-top: none;
 }
 
 .picture {
@@ -57,22 +63,27 @@ body {
     height: 200px;
     width: 350px;
     margin-top: 150px;
+
 }
 
 .holder1 {
     background-color: rgb(37, 84, 214);
     color: white;
-    padding-top: 5px;
+    padding-top: px;
     padding-bottom: 5px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    border: solid;
+    border-color: black;
 }
 
 .holder2{
-    background-color: rgb(230, 222, 214);
+    background-color: rgb(248, 246, 231);
     color: rgb(0, 0, 0);
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid;
+    border-top: none
 }
 
 .user {
@@ -94,7 +105,7 @@ body {
 }
 
 .mesg {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	font-size: 25px;
 	padding: 5px 5px 5px 10px;
 	color: #303030;
@@ -113,9 +124,84 @@ body {
     align-items:  center;
 }
 
+.clickedFriend {
+    background-color: #f0ebad;
+    margin: 20px 20px 20px 20px;
+    border-left: 1px solid #aab8c2;
+    border-right: 1px solid #aab8c2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items:  center;
+}
 
+.icon {
+    padding-bottom: 20px;
+    border-bottom: solid;
+    border-color: #000000;
+}
 
+#room {
+    border: 0 none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 300px;
+    background: rgb(188, 196, 187);
+}
+.question{
+    padding-bottom: 5px;
+    padding-top: 15px;
+    text-align: left;
+    padding-left: 25px
+}
 
+.usernameInput{
+    width: 300px;
+}
+
+.inputFeilds {
+    padding-top: 10px;
+}
+
+.roomChooser{
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.newRoomForm {
+    padding-top: 10px;
+}
+
+.creatingNewTweet {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.textbox {
+    width: 400px;
+    height: 50px;
+    margin-left: 47px;
+    margin-right: 10px;
+}
+
+.submitMessage {
+    height: 50px;
+    width: 40px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.send {
+    height: 50px;
+    margin-top: 3px;
+}
 
 
 
