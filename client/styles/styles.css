@@ -1,15 +1,15 @@
 body {
-    background: #eee;
     text-align: center;
     padding: 0 25px;
     font-family: arial, sans-serif;
+    background-repeat: no-repeat;
+    background-image: url("http://technology.inquirer.net/files/2017/10/the-most-famous-windows-wallpaper-ever-turns-20-505668-2.jpg")
 }
 
 #main, #chats {
     width: 500px;
     margin: auto;
     text-align: left;
-    background: white;
     padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
@@ -86,5 +86,94 @@ form input[type=text] {
 .friend {
     color: #fff;
     background-color: #0090da;
+}
+
+.header {
+    background-color: rgb(37, 84, 214);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 500px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#messengerBody {
+    margin-left: 500px;
+    background-color: rgb(230, 222, 214);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+
+}
+
+.picture {
+    position: static;
+    display: inline-block;
+    height: 5em;
+    margin-left: 0px;
+}
+
+.chats {
+    margin-left: auto;
+    color: black;
+    display: inline-block;
+    border: black;
+    background-color: white;
+    height: 500px;
+    width: 500px;
+    overflow-y: scroll;
+}
+
+.room {
+    position: top;
+}
+
+.holder1 {
+    background-color: rgb(37, 84, 214);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 1000px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.holder2{
+    background-color: rgb(230, 222, 214);
+    color: rgb(0, 0, 0);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 1000px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.user {
+	font-weight: bold;
+	font-size: 14px;
+	color: #000000;
+	border: none;
+    background: none;
+    padding-right: 300px;
+    padding-top: 5px;
+
+}
+
+.mesg {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	padding: 5px 5px 5px 10px;
+	color: #303030;
+}
+
+.render {
+    background-color: #c0deed;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+	border-left: 1px solid #aab8c2;
+	border-right: 1px solid #aab8c2;
 }
 

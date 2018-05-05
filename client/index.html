@@ -23,11 +23,31 @@
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
   </head>
+
+        <!-- Your HTML goes here! -->
   <body>
-    <div id="main">
-      <h1>chatterbox</h1>
-      <!-- Your HTML goes here! -->
+    <div class = 'holder userName roomChooser'>
+      <div class = 'holder1'>Choose A Room To Start Meowing!</div>
+      <div class = 'holder2'>
+        <div class = 'username'></div>
+        <div class ='roomChooser'> 
+          <select id = 'room'></select>
+        </div>
+        <div class = 'usernameChooser'>
+          <div class = 'question'>
+            What's your username?
+          </div>   
+            <input type = 'form' class = 'usernameInput'>
+        </div>
+      </div>
     </div>
-    <div id="chats"></div>
+
+
+    <div class = 'header'>Cat Messenger</div>
+    <div id = 'messengerBody' >
+      <div class = 'picture'></div>
+      <div class = 'chats' style: 'overflow: scroll; width: 200px; height: 100px;'></div>
+      <form class = 'creatingNewTweet'><input type = 'text' class = 'textbox'><input type = 'button' class = 'submitMessage'></form>
+    </div>
   </body>
 </html>
