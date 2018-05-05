@@ -94,6 +94,7 @@ form input[type=text] {
     padding-top: 5px;
     padding-bottom: 5px;
     margin-left: 500px;
+    margin-top: auto;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
@@ -124,10 +125,14 @@ form input[type=text] {
     height: 500px;
     width: 500px;
     overflow-y: scroll;
+    margin-top: 20px;
 }
 
 .room {
     position: top;
+}
+.holder{
+    /* float: left; */
 }
 
 .holder1 {
@@ -170,9 +175,7 @@ form input[type=text] {
 
 .render {
     background-color: #c0deed;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
+    margin: 20px 20px 20px 20px;
 	border-left: 1px solid #aab8c2;
 	border-right: 1px solid #aab8c2;
 }
