@@ -3,10 +3,215 @@ body {
     padding: 0 25px;
     font-family: arial, sans-serif;
     background-repeat: no-repeat;
-    background-image: url("http://technology.inquirer.net/files/2017/10/the-most-famous-windows-wallpaper-ever-turns-20-505668-2.jpg")
+    background-image: url("http://technology.inquirer.net/files/2017/10/the-most-famous-windows-wallpaper-ever-turns-20-505668-2.jpg");
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-#main, #chats {
+.messengerHolder{
+    height: 700px;
+    width: 550px;
+    margin-top: 90px;
+}
+
+.header {
+    background-color: rgb(37, 84, 214);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border: solid;
+    border-color: black;
+}
+
+#messengerBody {
+    background-color: rgb(230, 222, 214);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid;
+    border-color: black;
+    border-top: none;
+}
+
+.picture {
+    position: static;
+    display: inline-block;
+    height: 5em;
+    margin-left: 0px;
+}
+
+.chats {
+    margin-left: auto;
+    color: black;
+    display: inline-block;
+    border: black;
+    background-color: white;
+    height: 450px;
+    width: 500px;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+
+.room {
+    position: top;
+}
+.holder{
+    height: 200px;
+    width: 350px;
+    margin-top: 150px;
+
+}
+
+.holder1 {
+    background-color: rgb(37, 84, 214);
+    color: white;
+    padding-top: px;
+    padding-bottom: 5px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border: solid;
+    border-color: black;
+}
+
+.holder2{
+    background-color: rgb(248, 246, 231);
+    color: rgb(0, 0, 0);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid;
+    border-top: none
+}
+
+.user {
+	font-weight: bold;
+	font-size: 14px;
+	color: #000000;
+	border: none;
+	background: none;
+	padding-left: 30px;
+	padding-top: 9px;
+	padding-bottom: 10px;
+}
+
+.userImage {
+    position: static;
+    display: inline-block;
+    height: 1em;
+    margin-left: 0px;
+}
+
+.mesg {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 25px;
+	padding: 5px 5px 5px 10px;
+	color: #303030;
+	margin-left: 100px;
+	align-items:  center;
+}
+
+.render {
+    background-color: #c0deed;
+    margin: 20px 20px 20px 20px;
+    border-left: 1px solid #aab8c2;
+    border-right: 1px solid #aab8c2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items:  center;
+}
+
+.clickedFriend {
+    background-color: #f0ebad;
+    margin: 20px 20px 20px 20px;
+    border-left: 1px solid #aab8c2;
+    border-right: 1px solid #aab8c2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items:  center;
+}
+
+.icon {
+    padding-bottom: 20px;
+    border-bottom: solid;
+    border-color: #000000;
+}
+
+#room {
+    border: 0 none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 300px;
+    background: rgb(188, 196, 187);
+}
+.question{
+    padding-bottom: 5px;
+    padding-top: 15px;
+    text-align: left;
+    padding-left: 25px
+}
+
+.usernameInput{
+    width: 300px;
+}
+
+.inputFeilds {
+    padding-top: 10px;
+}
+
+.roomChooser{
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.newRoomForm {
+    padding-top: 10px;
+}
+
+.creatingNewTweet {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.textbox {
+    width: 400px;
+    height: 50px;
+    margin-left: 47px;
+    margin-right: 10px;
+}
+
+.submitMessage {
+    height: 50px;
+    width: 40px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.send {
+    height: 50px;
+    margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+/* #main, #chats {
     width: 500px;
     margin: auto;
     text-align: left;
@@ -86,97 +291,4 @@ form input[type=text] {
 .friend {
     color: #fff;
     background-color: #0090da;
-}
-
-.header {
-    background-color: rgb(37, 84, 214);
-    color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-left: 500px;
-    margin-top: auto;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
-
-#messengerBody {
-    margin-left: 500px;
-    background-color: rgb(230, 222, 214);
-    color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 0px;
-
-}
-
-.picture {
-    position: static;
-    display: inline-block;
-    height: 5em;
-    margin-left: 0px;
-}
-
-.chats {
-    margin-left: auto;
-    color: black;
-    display: inline-block;
-    border: black;
-    background-color: white;
-    height: 500px;
-    width: 500px;
-    overflow-y: scroll;
-    margin-top: 20px;
-}
-
-.room {
-    position: top;
-}
-.holder{
-    /* float: left; */
-}
-
-.holder1 {
-    background-color: rgb(37, 84, 214);
-    color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-right: 1000px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
-
-.holder2{
-    background-color: rgb(230, 222, 214);
-    color: rgb(0, 0, 0);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-right: 1000px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
-
-.user {
-	font-weight: bold;
-	font-size: 14px;
-	color: #000000;
-	border: none;
-    background: none;
-    padding-right: 300px;
-    padding-top: 5px;
-
-}
-
-.mesg {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 25px;
-	padding: 5px 5px 5px 10px;
-	color: #303030;
-}
-
-.render {
-    background-color: #c0deed;
-    margin: 20px 20px 20px 20px;
-	border-left: 1px solid #aab8c2;
-	border-right: 1px solid #aab8c2;
-}
-
+} */

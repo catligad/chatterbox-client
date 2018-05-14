@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>chatterbox</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Titillium+Web:700" rel="stylesheet">
 
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -22,33 +23,42 @@
     <!-- your scripts -->
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
+
+    
   </head>
 
         <!-- Your HTML goes here! -->
   <body>
     <div class = 'holder userName roomChooser'>
-      <div class = 'holder1'>Choose A Room To Start Meowing!</div>
+      <div class = 'holder1'>Cat Messenger</div>
       <div class = 'holder2'>
         <img src = 'https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif' class = 'icon'>
-        <div class = 'username'></div>
+        <div class = 'inputFeilds'>
+            Choose A Room To Start Meowing!
         <div class ='roomChooser'> 
           <select id = 'room'></select>
+          <input type = 'button' class = 'newRoomForm' value = 'Want to Create A New Room?'>
+        </div>
         </div>
         <div class = 'usernameChooser'>
           <div class = 'question'>
             What's your username?
           </div>   
             <input type = 'form' class = 'usernameInput'>
+          </div>
         </div>
       </div>
     </div>
 
-
-    <div class = 'header'>Cat Messenger</div>
-    <div id = 'messengerBody' >
-      <div class = 'picture'></div>
-      <div class = 'chats' style: 'overflow: scroll; width: 200px; height: 100px;'></div>
-      <form class = 'creatingNewTweet'><input type = 'text' class = 'textbox'><input type = 'button' class = 'submitMessage'></form>
+    <div class = 'messengerHolder'>
+        <div class = 'header'>Cat Messenger</div>
+        <div id = 'messengerBody' >
+          <div class = 'chats' style: 'overflow: scroll; width: 200px; height: 100px;'></div>
+          <form class = 'creatingNewTweet'>
+            <input type = 'text' class = 'textbox'>
+            <img src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAgVBMVEX///8AAAD8/PwFBQUODg4eHh7z8/MlJSX39/dcXFzBwcGBgYH6+voYGBhFRUWwsLAxMTEsLCzq6upWVlbHx8fY2NhwcHC5ubmHh4eampqPj49eXl7R0dHf3993d3cTExM9PT2oqKhnZ2dHR0dycnJOTk6pqalGRkafn5+MjIw2NjYzDheNAAAEzUlEQVR4nO2c13rqQAyEsektdAi9E5L3f8ADZx3Qgr1yWa/kfPovAxgpnsHjLS6VBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEGwyHo/7w2pi8jO+ujdKDfH1IVkZLX1AvrXBnUxGWjUvSfb05q6ntRcPZ3zzKcuKR1N75X6dyGNv3tr5Gb8w4q6rOScQxq5sdt3qCtLyCK8Ec/rtotl/HVUIzeFjVrU1SUhzCQPBvMadX2xidSWonKYUFcYk6G5kRsfvWJcWozaUlQ/i3BpmeONFCNT4tpS9OfcM+VHzE7YZ0pNW7t6VBv/OXLOlMMybMSfRaSWAM6Z8ggLvalnvdlGtXGnvOSaKbV7ksX9L43rj/G0/OxZGl/XVvDH8bIc2ceN7oaj8TVXPAocflaNp+U8o6w5lHdtKfye+ad5sGCWKWtQRT/aS5NpxdQKt0wZri1FbT4wnpbdhdGlZR+hrYDWyGj8apvNpcWgLcWw3TW1widTjgzaUnT25rzPJFNeYE3fEW9aHczGPzEwfgOWGKYtRW2BZEr6m0lcWwosU1apM2UvjrYUvDNlTG0Fb8YyJeUEhTaajQdCJFNu6TJlAm0puGbKRNpSYJmyTpMpl8m0pUAzJYHxZ7CCz9gfwzOl6wmKDvxR7Sf5JJIpu64z5SGNthRYpnQ7QZFSWwosU7qcoPBTa0uBZcqps0ypaSvNt3LJlK0s2lKgmdLJBIUPHZtCWwo0Uzq4mZxm1ZaCPlNa0FYAcab0YQwcZDsWninzNL4lbSkoM+UYflE7+/HoMqVFbSmoMuXJprYCSDKlbW0pKDKlOWPkxmBvu5ENTSOet7T8a7yiasSekAOItHVzimXPt6ka8eZ2G6HT1lQaCeXPSOuvmJ1OWZnuf94huyAeLF8QiZTV79ltQ1eWNfdNTubxiBwmt6GyLLnP7x0jW7iTzwgRVNbRxgGxW/evfMbsNGVdsx9v3DTeU+U3impVWY1533gy+jmOa0MZnLMdanIyjjvku3pFu9HNoiy/92U8GXmvJ9KUlf68YwbPf9cA/P5R2oOQGRyUAL/wkuoQmMHdTFzBQa1Kmi9EBhadTSVmUxY21OtucldTVtIQhxnc5XS7pqxkUzGYwZ0ugNAmR5oJPljDDO54SUpKZXEx+BM4yVOJKWjc4O6XbWlTustYH0ENTrLhV5sIjbNmjJXBAVBZWzQLYQYnWnNWelHWAXkzYnDSnSWasow/NKjBaff6wAU1XYOyhm3M4LRL5DVlRY8mt5gaHFQYQ1nYTDOdwQFQWdVQZeEGJ1/fX3pZPHcKeR0xOOHCax1tOePb8AZmcNKl8Dqasl5eQxYusNrwqilrA19BDU69XURHUxb4BxfD4ACorPrvH/1LQQz+RFtMHixAKJDBn7wrCzU4l22HOnDDxQA3ONuHi+jKwgzOYIdeFJqyzJOhLPZMRrI01g5gsos1io5ZSr/w2VccRQ9vgrHBATGUVYjnOTUwZTncwJIJRFl5Tr3a5f1BjU/4G/yJQVmMHuUQg0hlFcLggPCVf0UxOOAU0kaRHmr44O3phgV7zOSDlydnOt9Xaw+oLfc7nS3S+d0ByWDgNhv+/H4Pwu4JU6kYrgrrDEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQwvgHdvVMyJJZ/B8AAAAASUVORK5CYII=' class = 'send'> 
+          </form>
+        </div>
     </div>
   </body>
 </html>
