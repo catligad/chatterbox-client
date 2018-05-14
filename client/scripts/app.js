@@ -2,17 +2,29 @@ $(function() {
   var promise = [];
 
   //renders messages on the page: takes in the promise & the room that you're in
+<<<<<<< HEAD
   var renderMessage = (result, roomSelected) => {
     var scriptPatternUser = /<script>|<\/script>|\s|\W+/gi;
     var scriptPatternMessage = /<script>|<\/script>|/gi;
     var rooms = {};
     for (let i = result.length - 1; i >= 0; i--) {
+=======
+  function renderMessage(result, roomSelected) {
+    var scriptPatternUser = /<script>|<\/script>|\s|\W+/gi;
+    var scriptPatternMessage = /<script>|<\/script>|/gi;
+    var rooms = {};
+    for (let i = result.length-1; i >= 0 ; i--) {
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
       let mesg = result[i]['text'];
       let roomname = result[i]['roomname'];
       let user = result[i]['username'];
 
       //sanitizing each input
+<<<<<<< HEAD
       if (mesg !== undefined) {
+=======
+      if (mesg !== undefined){
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
         mesg = result[i]['text'].replace(scriptPatternMessage, '');
       } else {
         mesg = 'this user did not create a message!';
@@ -27,9 +39,15 @@ $(function() {
       }
 
       //append the chats of the room to your DOM
+<<<<<<< HEAD
       if (result[i]['roomname'] === roomSelected) {
         $('.chats').append(
           `<div class = 'render completeMessage'>
+=======
+      if (result[i]['roomname'] === roomSelected){
+        $('.chats').append(
+                `<div class = 'render completeMessage'>
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
                     <div class = 'user ${roomname} ${user}'> ${user} </div>
                     <div class = 'mesg ${roomname}'> ${mesg} </div>
                 </div>
@@ -39,7 +57,11 @@ $(function() {
   };
 
   //creates the room dropdown
+<<<<<<< HEAD
   var roomDropdown = (result) => {
+=======
+  function roomDropdown(result) {
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
     var rooms = {};
     for (let i = result.length - 1; i > 0; i--) {
       let roomname = result[i]['roomname'];
@@ -55,7 +77,11 @@ $(function() {
   };
 
   //renders the messages of the room on the DOM
+<<<<<<< HEAD
   var displayMessagesFromRoom = () => {
+=======
+  function displayMessagesFromRoom() {
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
     $('.completeMessage').remove();
     var roomSelected = $('#room').val();
     renderMessage(promise, roomSelected);
@@ -63,7 +89,11 @@ $(function() {
   };
 
   //posts message to the server
+<<<<<<< HEAD
   var postMessage = () => {
+=======
+  function postMessage () {
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
     let message = {};
     let text = $('.textbox').val();
     let username = $('.usernameInput').val();
@@ -87,6 +117,7 @@ $(function() {
   };
 
   //adds a new room to the options
+<<<<<<< HEAD
   var addRoom = () => {
     var room = prompt('What room would you like to create?');
   
@@ -94,6 +125,15 @@ $(function() {
       $('select').append(`<option id = '${room}'>${room}</option>`);
     }
   };
+=======
+  function addRoom() {
+    var room = prompt("What room would you like to create?");
+  
+    if (room !== null || room !== "") {
+        $('select').append(`<option id = '${room}'>${room}</option>`);
+    }
+  }
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
   
 
   //Actual code that is running
@@ -108,7 +148,11 @@ $(function() {
     } 
   });
 
+<<<<<<< HEAD
   $('.send').on('click', postMessage);
+=======
+  $('.submitMessage').on('click', postMessage);
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
   $('select').change(displayMessagesFromRoom);
   $('.textbox').val('start typing!');
   
@@ -117,7 +161,11 @@ $(function() {
     $(`.${username}`).closest('.completeMessage').toggleClass('clickedFriend');
   });
 
+<<<<<<< HEAD
   $('.icon').click(function() {
+=======
+  $('.icon').click(function(){
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
     $.ajax({
       url: 'http://parse.sfm6.hackreactor.com/chatterbox/classes/messages/',
       type: 'GET',
@@ -128,8 +176,14 @@ $(function() {
         displayMessagesFromRoom();  
       } 
     });
+<<<<<<< HEAD
   });
 
   $('.newRoomForm').on('click', addRoom);
+=======
+  })
+
+  $('.newRoomForm').on('click', addRoom)
+>>>>>>> c650161a0294ffdaab01af8f5461b48c054f0705
 
 });
